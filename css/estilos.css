@@ -1,0 +1,395 @@
+:root{
+    --blanco: white;
+    --fondo: #152A38;
+    --fondo-destacado: #253B4A;
+    --verde: #84C69B;
+    --rojo: #FF6078;
+    --gris: #363636;
+    --numero: rgb(197, 197, 197);
+    --azul: #43B4C6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--blanco);
+}
+body{
+    background-color: #152A38;
+    width: 100%;
+    background-image: url("../img/btc3.png");
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+header{
+    width: 100%;
+    padding: 40px 25px;
+    display: flex;
+    justify-content: center;
+}
+
+header .logo{
+    max-width: 250px;
+}
+p{
+    font-weight: 200;
+    font-size: 13px;
+}
+.verde{
+    color: var(--verde);
+}
+.rojo{
+    color: var(--rojo);
+}
+.blanco{
+    color: var(--blanco);
+}
+.numero, .simbolo{
+    color: var(--numero);
+    font-size: 11px;
+}
+.letraResaltada{
+    font-weight: 600;
+}
+
+/* DESTACADOS */
+main{
+    width: 75%;
+    margin: auto;
+}
+.destacados{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+}
+.destacado_contenido{
+    background-color: var(--fondo-destacado);
+    padding: 20px;
+    border-radius: 5px;
+}
+.destacado_contenido .destacados_global{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.destacados .destacado_contenido h2{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.destacado_contenido .destacados_trading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.destacados_trading .trading{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.destacados_trading .trading img{
+    width: 15px;
+    height: 15px;
+}
+.destacados_dominio{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* BUSCADOR */
+.buscador{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 30px 0;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.buscador .buscarIcono{
+    background-color: var(--azul);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px var(--azul);
+}
+.buscador .buscarIcono:hover{
+    box-shadow: 3px 3px 8px #5fd4e4;
+}
+#buscar{
+    width: calc(100% - 50px);
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #152A38;
+    border-radius: 5px;
+}
+.buscarCrypto{
+    border: none;
+}
+/* FIN BUSCAR */
+
+
+/* LISTADO CRYPTOS */
+.cryptos{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cryptos .listado{
+    grid-column: 1/3;
+    width: 100%;
+}
+.listado table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.listado table thead tr{
+    text-align: left;
+    height: 50px;
+    border-top: 1px solid var(--fondo-destacado);
+    border-bottom: 1px solid var(--fondo-destacado);
+}
+.listadoTop, .cryptoTop{
+    width: 70px;
+    padding-left: 20px;
+    font-weight: 200;
+    text-align: left;
+}
+.listadoNombre, .cryptoNombre{
+    font-weight: 200;
+    width: 250px;
+}
+.cryptoNombre{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 10px;
+}
+.cryptoNombre img{
+    width: 25px;
+}
+.listadoPrecio, .cryptoPrecio{
+    text-align: right;
+    width: 100px;
+    font-weight: 200;
+}
+.listado1h, .crypto1h{
+    font-weight: 200;
+    text-align: right;
+    width: 100px;
+}
+.listado24h, .crypto24h{
+    font-weight: 200;
+    text-align: right;
+    width: 100px;
+}
+.listado7d, .crypto7d{
+    font-weight: 200;
+    text-align: right;
+    width: 100px;
+}
+.listadoCap, .cryptoCap{
+    font-weight: 200;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.cryptoTop, .cryptoNombre, .cryptoPrecio, .crypto1h, .crypto24h, .crypto7d, .cryptoCap{
+    font-size: 13px;
+}
+
+tbody tr{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid var(--fondo-destacado);
+    cursor: pointer;
+}
+tbody tr:hover{
+    background-color: #253b4a27;
+}
+
+/* FIN LISTADO */
+/* INFORMACION DE LA CRIPTOMONEDA */
+.informacion{
+    grid-column: 3/4;
+    height: 615px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+    overflow: hidden;
+    box-shadow: -3px 3px 0px #00000029;
+    border-radius: 5px;
+}
+.informacion .infoSinCripto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 60px;
+}
+
+
+.informacion .infoSinCripto img{
+    width: 110px;
+}
+.informacion .infoSinCripto h2{
+    color: var(--fondo-destacado);
+    text-align: center;
+}
+
+.informacion .infoCrypto{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 25px;
+    left: 1000px;
+}
+
+.infoCrypto p{
+    font-weight: 100;
+}
+.infoNumero{
+    font-size: 14px;
+    justify-content: center;
+}
+.infoImg{
+    height: 105px;
+    margin: 10px 0;
+}
+.infoNombre{
+    font-size: 24px;
+    font-weight: 600;
+}
+.infoNombre .infoAbreviatura{
+    font-weight: 100;
+    font-size: 18px;
+}
+.infoPrecio{
+    font-weight: 900;
+    font-size: 30px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+.infoPrecio .infoPrecio1h{
+    font-size: 14px;
+    font-weight: 200;
+    background-color: var(--fondo-destacado);
+    border-radius: 5px;
+    padding: 0 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.infoPrecio .fondoverde{
+    background-color: var(--verde);
+}
+.infoPrecio .fondorojo{
+    background-color: var(--rojo);
+}
+.infoPrecio .fondoblanco{
+    background-color: var(--gris);
+}
+.parrafoInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.parrafoInfo p:nth-child(2){
+    
+    display: inline-flex;
+    justify-content: end;
+}
+
+
+
+
+/* MEDIA QUERIES */
+ @media (min-width: 1900px) {
+    main {
+        width: 1424px;
+    }
+}
+@media (max-width: 1545px) {
+    .destacado_contenido:nth-child(1){
+        grid-column: 1/-1;
+    }
+    .destacado_contenido:nth-child(2){
+        grid-column: 1/3;
+    }
+}
+@media (max-width: 1760px) {
+    main{
+        width: 90%;
+    }
+    .btcIcono{
+        display: none;
+    }
+    .listado1h, .listado7d, .listadoCap, .crypto1h, .crypto7d, .cryptoCap{
+        display: none;
+    }
+}
+@media (max-width: 1242px) {
+    .cryptos{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .cryptos .listado{
+        grid-column: 1/4;
+    }
+    .informacion{
+        grid-column: 4/-1;
+        
+    }
+}
+@media (max-width: 1060px) {
+    .listado24h, .crypto24h{
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .destacado_contenido:nth-child(2){
+        grid-column: 1/-1;
+    }
+    .destacado_contenido:nth-child(3){
+        grid-column: 1/-1;
+    }
+    .cryptos .listado{
+        grid-column: 1/-1;
+    }
+    .cryptoNombre{
+        width: 200px;
+    }
+    .informacion{
+        grid-column: 1/-1;
+        
+    }
+}

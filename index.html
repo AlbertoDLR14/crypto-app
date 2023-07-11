@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="CryptoData">
+    </header>
+    <main>
+        <!-- INICIO DESTACADOS -->
+        <div class="destacados">
+            <!-- Primer Destacado -->
+            <div class="destacado_contenido">
+                <h2>Global</h2>
+                <div class="destacados_global">
+                    <p class="globalCap">Cap del mercado: </p>
+                    <p class="globalVar">Variación últimas 24h: <span></span></p>
+                    <p class="globalVol">Volumen últimas 24h: </p>
+                    <p class="globalCriptos">Criptomonedas: </p>
+                    <p class="globalInter">Intercambios: </p>
+                </div>
+            </div>
+            <!-- Segundo Destacado -->
+            <div class="destacado_contenido">
+                <h2>Trending</h2>
+                <div class="destacados_trading">
+                    <!-- <div class="trading">
+                        <p><span class="numero">1</span></p>
+                        <img src="https://assets.coingecko.com/coins/images/8284/thumb/01_LunaClassic_color.png?1653547790" alt="Terra Luna">
+                        <p>Terra Luna Classic</p>
+                        <p class="simbolo">LUNC</p>
+                    </div>
+                    <div class="trading">
+                        <p><span class="numero">2</span></p>
+                        <img src="https://assets.coingecko.com/coins/images/8284/thumb/01_LunaClassic_color.png?1653547790" alt="Terra Luna">
+                        <p>Terra Luna Classic</p>
+                        <p class="simbolo">LUNC</p>
+                    </div>
+                    <div class="trading">
+                        <p><span class="numero">3</span></p>
+                        <img src="https://assets.coingecko.com/coins/images/8284/thumb/01_LunaClassic_color.png?1653547790" alt="Terra Luna">
+                        <p>Terra Luna Classic</p>
+                        <p class="simbolo">LUNC</p>
+                    </div>
+                    <div class="trading">
+                        <p><span class="numero">4</span></p>
+                        <img src="https://assets.coingecko.com/coins/images/8284/thumb/01_LunaClassic_color.png?1653547790" alt="Terra Luna">
+                        <p>Terra Luna Classic</p>
+                        <p class="simbolo">LUNC</p>
+                    </div>
+                    <div class="trading">
+                        <p><span class="numero">5</span></p>
+                        <img src="https://assets.coingecko.com/coins/images/8284/thumb/01_LunaClassic_color.png?1653547790" alt="Terra Luna">
+                        <p>Terra Luna Classic</p>
+                        <p class="simbolo">LUNC</p>
+                    </div> -->
+                </div>
+            </div>
+            <!-- Tercer Destacado -->
+            <div class="destacado_contenido">
+                <h2>Dominio</h2>
+                <div class="destacados_dominio">
+                    <!-- <p><span class="numero">1</span> BTC: 38.29%</p>
+                    <p><span class="numero">2</span> ETH: 16.51%</p>
+                    <p><span class="numero">3</span> USDT: 6.71%</p>
+                    <p><span class="numero">4</span> USDC: 4.87%</p>
+                    <p><span class="numero">5</span> BNB: 4.60%</p> -->
+                </div>
+            </div>
+        </div>
+        <!-- FIN DESTACADOS -->
+
+        <!-- BUSCADOR -->
+        <div class="buscador">
+            <input id="buscar" type="text" name="buscar" placeholder="Bitcoin...">
+            <button type="submit" class="buscarCrypto">
+                <span class="material-symbols-rounded buscarIcono">search</span>
+            </button>
+        </div>
+        <!-- FIN BUSCADOR -->
+
+        <!-- CRYPTOS -->
+        <div class="cryptos">
+            <!-- LISTADO DE LAS CRYPTOMONEDAS -->
+            <div class="listado">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="listadoTop">#</th>
+                            <th class="listadoNombre">Nombre</th>
+                            <th class="listadoPrecio">Precio</th>
+                            <th class="listado1h">1h%</th>
+                            <th class="listado24h">24h%</th>
+                            <th class="listado7d">7d%</th>
+                            <th class="listadoCap">Cap. de Mercado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="verCoins">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <!-- FIN LISTADO -->
+            <!-- INFORMACION DE LA CRYPTOMONEDA -->
+            <div class="informacion">
+                <div class="infoSinCripto">
+                    <img src="img/icono.png" alt="Icono CryptoData">
+                    <h2>Seleccione una <br>Criptomoneda</h2>
+                </div>
+                <div class="infoCrypto">
+                    <p class="infoNumero">#1</p>
+                    <img class="infoImg" src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579" alt="Bitcoin">
+                    <h2 class="infoNombre">Bitcoin <span class="infoAbreviatura">BTC</span></h2>
+                    <h1 class="infoPrecio">21.967,29€ <span class="infoPrecio1h fondoverde">-0.54%</span></h1>
+                    <div class="parrafoInfo">
+                        <p>Cap. del mercado:</p>
+                        <p class="infoCap">938.480.736.545.457€</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Volumen total: </p>
+                        <p class="infoVolumen">34.581.016.066€</p>
+                    </div>
+                    <div class="parrafoInfo p1h">
+                        <p>Precio 1h: </p>
+                        <p class="infoPrecio1h">0.1%</p>
+                    </div>
+                    <div class="parrafoInfo p24h">
+                        <p>Precio 24h:</p>
+                        <p class="infoPrecio24h">0.33458%</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Precio máximo 24h: </p>
+                        <p class="pMax">19.901,66€</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Precio mínimo 24h: </p>
+                        <p class="pMin">19.001,32€</p>
+                    </div>
+                    <div class="parrafoInfo p7d">
+                        <p>Precio 7 días:</p>
+                        <p class="infoPrecio7d">0.33458%</p>
+                    </div>
+                    <div class="parrafoInfo p30d">
+                        <p>Precio 30 días:</p>
+                        <p class="infoPrecio30d">0.33458%</p>
+                    </div>
+                    <div class="parrafoInfo p1y">
+                        <p>Precio 1 año:</p>
+                        <p class="infoPrecio1y">0.33458%</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Suministro circulante: </p>
+                        <p class="sCirculante">19.161.125</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Suministro máximo: </p>
+                        <p class="mCirculante">21.000.000</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Precio máx. histórico: </p>
+                        <p class="precioMax">59.717€</p>
+                    </div>
+                    <div class="parrafoInfo">
+                        <p>Precio mín. histórico: </p>
+                        <p class="precioMin">51.3€</p>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN INFORMACION DE LA CRYPTO -->
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
